@@ -3,6 +3,9 @@ const path = require('path');
 module.exports = {
   devServer: {
     publicPath: '/public/dist/',
+    historyApiFallback: {
+      index: './public/index.html',
+    },
   },
   // context: __dirname,
   mode: 'development',
