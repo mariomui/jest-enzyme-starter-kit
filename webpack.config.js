@@ -1,13 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  devServer: {
-    publicPath: '/public/dist/',
-    historyApiFallback: {
-      index: './public/index.html',
-    },
-  },
-  // context: __dirname,
+  context: __dirname,
   mode: 'development',
   entry: path.resolve(__dirname, './client/Entry.jsx'),
   output: {

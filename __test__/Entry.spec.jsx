@@ -1,10 +1,10 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import TestComponent from '../client/TestComponent';
+import Entry from '../client/Entry';
 
 
 test('hey', () => {
-  const tree = shallow(<TestComponent />);
+  const tree = shallow(<Entry />);
   expect(tree).toMatchSnapshot();
 });
