@@ -1,5 +1,13 @@
+The purpose of this repo is to provide a clear way to implement a jest/enzyme/webpack/dev-server starter environment
 
-# Dependencies
+The problem:
+webpack dev server wants to use the new @babel presets
+jest/enzyme want to use the old babel presets.(with the expanded env in the babelrc)
+
+The below appendixes are there to illustrate the problem and not a true guide. This is still a work in progress.
+
+## Appendix B package.json
+## Dependencies
 "path": "^0.12.7",
   // this was necessary for webpack to concat the entry/output dir paths.
 "react": "^16.7.0",
@@ -8,7 +16,7 @@
 "webpack": "^4.28.1"
   bundling stuff
 
-# Other  
+## Other  
 "jest": {
   "snapshotSerializers": [
     "jest-serializer-enzyme"
@@ -24,6 +32,7 @@
   "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
   "babel-preset-env": "^1.7.0",
   "babel-preset-react": "^6.24.1",
+    //the new @babel versions conflict with the build.
   "enzyme": "2.9.1",
   * enzyme 3.0 utterly breaks the entire jest build.
   "enzyme-adapter-react-16": "^1.7.1",
@@ -43,4 +52,33 @@
   "webpack-cli": "^3.1.2"
   * used to stop webpack from complaining
 }
+
+## Appendix B: babelRC
+* As you can see below, webpack-dev-server wants to use the @babel presets but the commented out pre-babel7 lines are necessary for jest to run.
+{
+  "presets": [
+    "@babel/preset-react",
+    "@babel/preset-env",
+    // "react",
+    // [
+    //   "env",
+    //   {
+    //     "targets": {
+    //       "browsers": "last 2 versions"
+    //     },
+    //     "loose": true,
+    //     "modules": false
+    //   }
+    // ],
+  ],
+  "plugins": [
+    "babel-plugin-transform-class-properties",
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "babel-plugin-transform-es2015-modules-commonjs"
+      ]
+    }
+  }
 }
