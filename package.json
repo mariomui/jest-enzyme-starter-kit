@@ -15,31 +15,35 @@
     "path": "^0.12.7",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "webpack": "^4.28.1",
-    "webpack-dev-server": "^3.1.11"
+    "webpack": "^4.28.1"
   },
   "jest": {
     "snapshotSerializers": [
-      "jest-serializer-enzyme"
+      "enzyme-to-json/serializer"
     ]
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
-    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "enzyme": "2.9.1",
+    "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.10.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
+    "jest-enzyme": "^7.0.1",
+    "jest-resolve": "^23.6.0",
     "jest-serializer-enzyme": "^1.0.0",
-    "web-dev-server": "^1.1.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.13"
   }
 }
