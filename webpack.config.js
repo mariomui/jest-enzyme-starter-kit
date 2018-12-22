@@ -2,6 +2,7 @@ const path = require('path');
 
 const config = {
   mode: 'development',
+  context: __dirname,
   entry: path.resolve(__dirname, 'client/Entry.jsx'),
   output: {
     path: path.resolve(__dirname, 'public/dist'),
@@ -23,8 +24,9 @@ const config = {
     ],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'public/'),
-    publicPath: path.resolve(__dirname, 'public/dist'),
+    contentBase: path.resolve(__dirname, '/public/'),
+    publicPath: path.resolve(__dirname, '/public/dist'),
+    port: 5000,
     historyApiFallback: {
       index: 'index.html',
     },
