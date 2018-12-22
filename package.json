@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "test:update": "jest -u",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
