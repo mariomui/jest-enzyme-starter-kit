@@ -1,11 +1,17 @@
 const path = require('path');
 
 module.exports = {
-  context: __dirname,
+  devServer: {
+    publicPath: '/public/dist/',
+    historyApiFallback: {
+      index: './public/index.html',
+    },
+  },
+  // context: __dirname,
   mode: 'development',
-  entry: './client/Index.jsx',
+  entry: path.resolve(__dirname, './client/Entry.jsx'),
   output: {
-    path: path.join(__dirname, 'public/dist'),
+    path: path.resolve(__dirname, 'public/dist'),
     filename: 'bundle.js',
   },
   resolve: {
@@ -18,12 +24,12 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.jsx?$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
-      },
+      // {
+      //   enforce: 'pre',
+      //   test: /\.jsx?$/,
+      //   loader: 'eslint-loader',
+      //   exclude: /node_modules/,
+      // },
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
