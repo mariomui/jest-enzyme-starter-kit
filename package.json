@@ -1,13 +1,17 @@
 {
   "name": "jest-enzyme-starter-kit",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "3.0.0",
+  "description": "The previous problems in v2.3 have mainly been solved.",
+  "main": "webpack.config.js",
   "scripts": {
     "test": "jest",
     "test:update": "jest -u",
     "dev": "webpack-dev-server",
     "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariomui/jest-enzyme-starter-kit.git"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +20,7 @@
     "path": "^0.12.7",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "webpack": "^4.28.1"
+    "webpack": "^4.28.2"
   },
   "jest": {
     "snapshotSerializers": [
@@ -28,7 +32,6 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-0",
-    "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
@@ -41,9 +44,6 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
-    "jest-enzyme": "^7.0.1",
-    "jest-resolve": "^23.6.0",
-    "jest-serializer-enzyme": "^1.0.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.13"
   }
