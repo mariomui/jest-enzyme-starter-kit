@@ -2,11 +2,13 @@ const path = require('path');
 
 const config = {
   devServer: {
-    publicPath: '/public/dist',
-    port: 5000,
-    historyApiFallback: {
-      index: '/public/index.html',
-    },
+    // publicPath: '/public/dist',
+    publicPath: path.resolve(__dirname, './public/dist/'),
+    contentBase: path.resolve(__dirname, './public/'),
+    port: 5100,
+    // historyApiFallback: {
+    //   index: '/public/index.html',
+    // },
   },
   mode: 'development',
   context: __dirname,
