@@ -2,10 +2,10 @@ const path = require('path');
 
 const config = {
   devServer: {
-    publicPath: '/public/',
+    publicPath: '/public/dist',
     port: 5000,
     historyApiFallback: {
-      index: './public/index.html',
+      index: '/public/index.html',
     },
   },
   mode: 'development',

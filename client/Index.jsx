@@ -3,7 +3,7 @@ import React from 'react';
 
 const Index = () => (
   <div>
-    helloddfind me
+    do not feardd
   </div>
 );
 
