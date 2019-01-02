@@ -11,7 +11,7 @@
 # Other  
 "jest": {
   "snapshotSerializers": [
-    "jest-serializer-enzyme"
+    "jest-serializer-enzyme" << This is outdated << switched over to another serializer
   ]
 }    
 * //needed to snapshot Components.
